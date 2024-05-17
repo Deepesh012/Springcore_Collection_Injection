@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+					<!-- This is config file of Constructor Injection -->
+
+	<bean class="com.springcore.collection.Emp" name="emp1" >
+		<property name="name" value="Deep" />
+
+		<property name="phones">
+			<list>
+				<value>1111111111</value>
+				<value>12312312</value>
+				<value>1122112222</value>
+				<null />
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+				<value>delhi</value>
+				<value>agra</value>
+				<value>Jaipur</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 months" />
+				<entry key="python" value="3 months" />
+				<entry key="C" value="1 month" />
+			</map>
+		</property>
+		
+		<property  name="props">
+		<props>
+			<prop key="a">A</prop>
+			<prop key="b">B</prop>
+		</props>
+		</property>
+	</bean>
+
+
+</beans>
